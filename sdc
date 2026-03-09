@@ -27,13 +27,3 @@ def translit(message):
 
 print("Bot ishlayapti...")
 bot.infinity_polling()
-import requests
-
-# Bot buyruqlari qatoriga qo'shing:
-def get_server_ip(update, context):
-    try:
-        # Tashqi IP-ni aniqlash uchun servisdan foydalanamiz
-        ip = requests.get('https://ipify.org').text
-        update.message.reply_text(f"Bot hozirda ushbu IP-manzilli serverda ishlamoqda: {ip}")
-    except Exception as e:
-        update.message.reply_text("Xatolik yuz berdi!")
